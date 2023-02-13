@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/results.css') }}">
+    <title>Dojo Survey Results</title>
+</head>
+<body>
+    <div class="window">
+        <div class="nameBox">
+            <p>Name: </p>
+            <p>{{session['user_name']}}</p>
+        </div>
+        <div class="locationBox">
+            <p>Dojo Location: </p>
+            <p>{{session['user_location']}}</p>
+        </div>
+        <div class="langBox">
+            <p>Favorite Language </p>
+            <p>{{session['user_language']}}</p>
+        </div>
+        <div class="commentBox">
+            <p>Comment: </p>
+            <p>{{session['user_comment']}}</p>
+        </div>
+        <div class="buttonBox">
+            <button type="submit">Go Back</button>
+        </div>
+    </div>
+</body>
+</html>
